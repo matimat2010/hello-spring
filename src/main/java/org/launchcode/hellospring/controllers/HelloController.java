@@ -33,6 +33,8 @@ public class HelloController {
     public String helloWithPathParam(@PathVariable String name){
         return "Hello, " + name + "!";
     }
+
+
     //live /hello/form
     @GetMapping("form")
 
@@ -42,8 +44,14 @@ public class HelloController {
                 "<form action='hello' method='post'>"  + // submit a request to /hello
                 "<input type='text' name='name'>" +
                 "<input type='submit' value ='Greet me!'>" +
+                "<select language ='language'>" +
+                "<option>Spanish</option>" +
+                "<option>French</option>" +
+                "<option>German</option>" +
+                "<option>Martian</option>" +
+                "<option>Ruassian</option>" +
+                "</select>" +
                 "</form>" +
-
                 "</body>" +
                 "</html>";
 
